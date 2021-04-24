@@ -29,6 +29,8 @@ public class DriverClass {
                 System.out.println("3. Enter a new Album");
                 System.out.println("4. Enter a new instrument");
                 System.out.println("5. Enter performance");
+                System.out.println("6. Enter plays");
+                System.out.println("7. Enter a new song");
                 System.out.println("0. Exit");
 
                 ch = Integer.parseInt(sc.nextLine());
@@ -53,6 +55,14 @@ public class DriverClass {
                     case 5:
                         Performs performs = new Performs();
                         performs.addPerforms(connection);
+                        break;
+                    case 6:
+                        Plays plays = new Plays();
+                        plays.addPlays(connection);
+                        break;
+                    case 7:
+                        Songs songs = new Songs();
+                        songs.addSong(connection);
                         break;
                     case 0:
                         break;
